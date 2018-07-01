@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>test vue双向绑定</title>
+  <script src="vue.js"></script>
+</head>
+<body>
+  <h1 id="app" style="text-align: center;">
+    {{ message }}
+  </h1>
+  <script> 
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+
+setTimeout(() => {
+  debugger;
+  app.message = 'hello king';
+}, 1000);
+  </script>
+</body>
+</html>
